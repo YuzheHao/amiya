@@ -44,20 +44,23 @@ def read_files_in_path(work_path,show_hidden=False):
 
 def magic_draw(y,
     x = None,
-    fig_size = (15,6),
-    fig_title = None,
+    figsize = (15,6),
+    title = None,
     x_label = None,
     y_label = None,
     colors = ['deepskyblue','orange','limegreen','#C82B46','#4EA089','#8B77D0','#93613A','#A5CC4F'],
     alpha = 0.87,
-    color_code = None
+    color_code = None,
+    legend = None
     ):
 
-    plt.figure(figsize=fig_size)
+    plt.figure(figsize=figsize)
     plt.grid()
-    plt.title(fig_title)
+    plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
+    plt.legend(legend, loc='best')
+
 
     # if multiple input:
     if type(y[0]) == list:

@@ -79,13 +79,14 @@
 #### ---> input (1+8):
 * **arg#1** `y`(List / Lists' List): list/several lists of data need to be drew. 
 * **arg#2** `x=range(len(y))` (List / Lists' List): list/several lists of x-coordinates, default as an one-by-one conuting list.
-* arg#3 `fig_size=(15,6)` (tuple): the size of figure.
-* arg#4 `fig_title=None` (string): title of figure.
+* arg#3 `figsize=(15,6)` (tuple): the size of figure.
+* arg#4 `title=None` (string): title of figure.
 * arg#5 `x_lable=None` (string): label shown on x-axis.
 * arg#6 `y_lable=None` (string): label shown on y-axis.
 * arg#7 `colors=['deepskyblue','orange','limegreen','#C82B46','#4EA089','#8B77D0','#93613A','#A5CC4F']` (list): the color used during drawing (max 8 for input).
 * arg#8 `alpha=0.87` (float): the transparent degree.
 * **arg#9** `color_code=None` (int / string): the color you want to use when drawing a single curve. if input an integer, then it will use it as index to choose from the colors box; or you could specify a color name/6-digit-Hex-color-code; if input an invalid code, the color will be deepskyblue by default.
+* **arg#10** `legend=None` (list of string): the legend you want to show on the figure, the length should be the same as input y and x.
 
 #### ---> output (1):
 * show the drew figure 
