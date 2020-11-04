@@ -59,7 +59,6 @@ def magic_draw(y,
     plt.title(title)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
-    plt.legend(legend, loc='best')
 
 
     # if multiple input:
@@ -93,6 +92,7 @@ def magic_draw(y,
                 warning('color code went wrong, automatically choose default.')
         plt.plot(x, y, alpha=alpha, color=color)
 
+    plt.legend(labels=legend, loc='best')
     plt.show()
 
 
