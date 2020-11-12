@@ -107,7 +107,7 @@ def read_lines_in_file(file_path):
     info("file reading finished.")
     return box
 
-def write_lines_to_file(box, file_path, type):
+def write_lines_to_file(box, file_path, type='a'):
     save = open(file_path,type)
     for line in box:
         print(line, file=save)

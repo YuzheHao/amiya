@@ -113,4 +113,36 @@
 ``````
 ----
 
+### read_lines_in_files(`file_path`)
+
+#### ---> input (1):
+* arg#1 `file_path` (string): path of the file which you want to read its content.  
+
+#### ---> output (1):
+* return (list): a list of strings, which contains the strings of each line in the file..
+* the last char '\n' is deleted during the function.
+
+#### ---> example:
+``````python
+>>> read_lines_in_files('/home/mydir/myfile.txt')
+['first line in file','second line in file','thrid line in file']
+``````
+----
+
+### write_lines_to_file(`box`, `file_path`, *type='a'*)
+
+#### ---> input (3):
+* arg#1 `box` (list of string): the content that you want to write in the file, each string element is the content of a line.  
+* arg#2 `file_path`  (string): path of the file which you want to write your content.  
+* arg#3 `type='a'` (string): 'w' for overwrite the original content, and default 'a' for append new content to the original text.
+
+#### ---> output (0):
+* an info will notice you the writing have finished. 
+
+#### ---> example:
+``````python
+>>> write_lines_to_file(my_content_list, '/home/mydir/myfile.txt')
+#print: file saving finished.
+``````
+----
 
