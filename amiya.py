@@ -5,7 +5,18 @@ import math
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
-
+def help(func_name):
+    length = len(func_name)
+    content = read_lines_in_file('./README.md')
+    flag = 0
+    for line in content:
+        if (line[4:4+length]==func_name):
+            flag = 1
+        if flag == 0: pass
+        else:
+            if(line!='----'): print(line)
+            else: return 
+            
 def info(text):
     print('\033[7;32m[info]\033[0m ' + str(text))
 
@@ -112,7 +123,7 @@ def write_lines_to_file(box, file_path, type='a'):
     for line in box:
         print(line, file=save)
     save.close()
-    info("file saving finished.")
+    # info("file saving finished.")
 
 
 

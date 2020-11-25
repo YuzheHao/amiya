@@ -74,7 +74,7 @@
 
 ----
 
-### def magic_draw(`y`, *x*, *fig_size*, *fig_title*, *x_label*, *y_label*, *color_code*, *colors*, *alpha*)
+### magic_draw(`y`, *x*, *fig_size*, *fig_title*, *x_label*, *y_label*, *color_code*, *colors*, *alpha*)
 
 #### ---> input (1+8):
 * **arg#1** `y`(List / Lists' List): list/several lists of data need to be drew. 
