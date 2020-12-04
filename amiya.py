@@ -102,8 +102,8 @@ def magic_draw(y,
             else:
                 warning('color code went wrong, automatically choose default.')
         plt.plot(x, y, alpha=alpha, color=color)
-
-    plt.legend(labels=legend, loc='best')
+    if legend!=None:
+        plt.legend(labels=legend, loc='best')
     plt.show()
 
 
@@ -125,8 +125,10 @@ def write_lines_to_file(box, file_path, type='a'):
     save.close()
     # info("file saving finished.")
 
-
-
+import time
+def TIMESTAMP():
+    string = time.strftime("%Y-%m-%d-%a-%H:%M:%S-%Z", time.localtime())
+    return string
 
 
 
