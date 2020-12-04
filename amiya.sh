@@ -1,6 +1,23 @@
 . ~/Documents/projects/peanuts/amiya/experiments_list.sh
 . ~/Documents/projects/peanuts/amiya/knowledge.sh
 
+_amiya(){
+    local cur cword words  # 定义变量，cur表示当前光标下的单词
+    read -cn cword  # 所有指令集
+    read -Ac words  # 当前指令的索引值
+    cur="$words[$cword-1]" # 当前指令值
+    if [ $cur = "amiya" ]  # 根据当前不同指令返回对应的提示信息
+    then
+        reply=(create_experiments add_experiment)  # 必须是值reply，返回提示信息内容
+    else
+        reply=()
+    fi
+}
+compctl -K _amiya amiya   # -K 表示使用函数
+
+
+function amiya() {
+
 if [ $# = 0 ]; then
 	echo "please let me know what you want: "
 	echo "* <create_experiments>"
@@ -49,3 +66,4 @@ else
 
 
 fi
+}
