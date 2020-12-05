@@ -52,7 +52,6 @@ else
 fi
 }
 
-. ~/Documents/projects/peanuts/amiya/experiments_list.sh
 . ~/Documents/projects/peanuts/amiya/knowledge.sh
 
 _amiya(){
