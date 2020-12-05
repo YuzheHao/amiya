@@ -38,6 +38,7 @@ elif [ $1 = "add_experiment" ]; then
 			echo 'CONFIRMED, creating now'
 			mkdir ~/Experiments/${(P)now}/$2
 			echo "\n<$2>" $(date "+%Y-%m-%d %H:%M:%S") >> ~/Experiments/${(P)now}/index
+			touch ~/Experiments/${(P)now}/$2/log
 		elif [ $input = "n" ]; then 
 			echo 'CANCELED'
 		else
