@@ -5,7 +5,20 @@ import math
 from matplotlib import pyplot as plt
 from tqdm import tqdm
 
-def help(func_name):
+func_list = [
+    'info',
+    'del_file_suffix',
+    'read_files_in_path',
+    'magic_draw',
+    'read_lines_in_file',
+    'write_lines_to_file',
+]
+
+def help(func_name=''):
+    if func_name == '':
+        for item in func_list:
+            print('* '+item)
+        func_name = input(':')
     length = len(func_name)
     content = read_lines_in_file('./README.md')
     flag = 0
