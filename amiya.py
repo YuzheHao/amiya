@@ -12,6 +12,7 @@ func_list = [
     'magic_draw',
     'read_lines_in_file',
     'write_lines_to_file',
+    'upper_dir',
 ]
 
 def help(func_name=''):
@@ -143,6 +144,11 @@ def TIMESTAMP():
     string = time.strftime("%Y-%m-%d-%a-%H:%M:%S-%Z", time.localtime())
     return string
 
+def upper_dir(string):
+    if string[-1] == '/': string = string[:-1]
+    while string[-1]!='/':
+        string = string[:-1]
+    return string
 
 
 
