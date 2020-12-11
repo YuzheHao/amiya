@@ -145,10 +145,18 @@ def TIMESTAMP():
     return string
 
 def upper_dir(string):
+    WAVE_START_flag = False
     if string[-1] == '/': string = string[:-1]
-    while string[-1]!='/':
-        string = string[:-1]
-    return string
+    if string[0] == '~':
+        string = string[1:]
+        WAVE_START_flag = True
+
+    path_list = string.strip().split('/')
+    current = path_list[-1]
+    upper_dir = os.path.join('/',*path_list[:-1])
+    if WAVE_START_flag: upper_dir = '~'+upper_dir
+
+    return upper_dir,current
 
 
 
