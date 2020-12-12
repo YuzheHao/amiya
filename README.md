@@ -15,6 +15,7 @@
 >>>
 
 ``````
+
 ----
 
 ### info(`text`), warning(`text`), error(`text`), bug(`text`)
@@ -127,6 +128,7 @@
 >>> read_lines_in_files('/home/mydir/myfile.txt')
 ['first line in file','second line in file','thrid line in file']
 ``````
+
 ----
 
 ### write_lines_to_file(`box`, `file_path`, *type='a'*)
@@ -144,5 +146,24 @@
 >>> write_lines_to_file(my_content_list, '/home/mydir/myfile.txt')
 #print: file saving finished.
 ``````
+
 ----
+
+### upper_dir(`string`)
+
+#### ---> input (1):
+* arg#1 `string` (string): a path string.  
+
+#### ---> output (2):
+* return#1 `uppdir` (string): the path string of upper directory.
+* return#2 `current` (string): the name of last directory 
+
+#### ---> example:
+``````python
+>>> upper_dir('/home/earth/carifornia/mydir')
+'/home/earth/carifornia', 'mydir'
+``````
+
+----
+
 
