@@ -1,3 +1,9 @@
+'''
+Version 1.0.3
+Lastest Update: 2021.1.26
+by Yuzhe H.
+'''
+
 import cv2
 import numpy as np
 import os
@@ -53,7 +59,7 @@ def del_file_suffix(string):
 
 def read_files_in_path(work_path,show_hidden=False):
     if work_path[-1]!='/': work_path += '/'
-    if work_path[0]!='/': work_path = '/' + work_path
+    if work_path[0]!='~' and work_path[0]!='/': work_path = '/' + work_path
     files, dirs = [], []
     for f in os.listdir(work_path):
         if os.path.isdir(work_path + f):
